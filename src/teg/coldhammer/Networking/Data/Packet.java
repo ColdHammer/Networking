@@ -1,10 +1,5 @@
 package teg.coldhammer.Networking.Data;
 
-import com.sun.istack.internal.NotNull;
-
-import java.nio.ByteBuffer;
-import java.util.Arrays;
-
 public class Packet {
     private boolean isValid = false;
 
@@ -35,14 +30,14 @@ public class Packet {
     {
         this.buffer = buffer;
         bytesLeft -= buffer.length;
-    }kak
+    }
 
     public byte[] getBuffer()
     {
         return buffer;
     }
 
-    public byte[] getBufferedData()
+    public void getBufferedData()
     {
 
     }
