@@ -35,16 +35,11 @@ public class Packet {
     {
         this.buffer = buffer;
         bytesLeft -= buffer.length;
-    }kak
-
-    public byte[] getBuffer()
-    {
-        return buffer;
     }
 
-    public byte[] getBufferedData()
+    public byte[] getBytes()
     {
-
+        return buffer;
     }
 
     public int getBytesLeft()

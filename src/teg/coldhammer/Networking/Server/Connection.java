@@ -21,10 +21,11 @@ public class Connection {
     public void Receive()
     {
         try{
+            Packet packet = null;
             while (socket.isConnected())
             {
                 StateObject stateObject = new StateObject(socket);
-
+                stateObject.packet = packet;
                 ReceiveCallBack(stateObject);
             }
         }
@@ -59,7 +60,7 @@ public class Connection {
         Packet packet = stateObject.packet;
         Socket socket = stateObject.socket;
         OutputStream outputStream = socket.getOutputStream();
-        outputStream.write(packet.getData());
+        outputStream.write(packet.getBytes());
     }
 
     public void Log(String message, Object... args)

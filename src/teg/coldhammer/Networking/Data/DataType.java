@@ -29,7 +29,7 @@ public class DataType {
             onDataReceivedListeners.add(onDataReceivedListener);
     }
 
-    public void putData(byte[] data)
+    public void pushData(byte[] data)
     {
         for(OnDataReceivedListener onDataReceivedListener : onDataReceivedListeners)
         {
